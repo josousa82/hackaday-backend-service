@@ -14,7 +14,7 @@ import java.util.List;
  * in package - com.mchackton.configurations
  **/
 @Service
-public class ItemAlertImpl implements FoodAlertClient{
+public class ItemAlertImpl {
 
     private RestTemplate restTemplate;
     private final String ROOT_API_FOOD = "https://data.food.gov.uk/food-alerts/id?type=AA&_limit=10";
@@ -24,9 +24,8 @@ public class ItemAlertImpl implements FoodAlertClient{
         this.restTemplate = restTemplate;
     }
 
-    @Override
     public ResponseFoodAlerts getResponse() {
         ResponseEntity<ResponseFoodAlerts> response = restTemplate.getForEntity(ROOT_API_FOOD, ResponseFoodAlerts.class);
-        return Arrays.asList(response.getBody());
+        return response.getBody();
     }
 }

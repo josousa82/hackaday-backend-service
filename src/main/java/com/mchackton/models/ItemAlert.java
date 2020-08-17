@@ -3,6 +3,7 @@ package com.mchackton.models;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.Entity;
 import java.util.ArrayList;
@@ -13,12 +14,11 @@ import java.util.List;
  * in package - com.mchackton.models
  **/
 @Getter
-@Setter
-@EqualsAndHashCode
+@ToString
 public class ItemAlert {
-        private String shortTitle;
-        private String date;
-        private List reportingBusiness = new ArrayList<ReportingBusiness>();
+        public String shortTitle;
+        public String created;
+        public ReportingBusiness reportingBusiness;
 
         public ItemAlert() {
         }
