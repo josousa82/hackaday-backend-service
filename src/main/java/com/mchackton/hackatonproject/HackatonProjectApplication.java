@@ -10,10 +10,5 @@ public class HackatonProjectApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(HackatonProjectApplication.class, args);
-
-
-
     }
-
-
 }

@@ -10,10 +10,7 @@ import org.springframework.stereotype.Service;
  **/
 @Service
 public class RestServiceFoodAPI {
-
-
     public void apiCall() {
         var applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-        //FoodAlertClient client = applicationContext.getBean(FoodAlertClient.class);
     }
 }

@@ -3,14 +3,12 @@ package com.mchackton.services;
 import com.github.jknack.handlebars.Handlebars;
 import com.github.jknack.handlebars.Template;
 import com.mchackton.models.ResponseFoodAlerts;
-import com.mchackton.restcalls.RestServiceFoodAPI;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
 import javax.mail.internet.MimeMessage;
 import java.io.IOException;
-import java.util.List;
 
 /**
  * Created by sousaJ on 17/08/2020

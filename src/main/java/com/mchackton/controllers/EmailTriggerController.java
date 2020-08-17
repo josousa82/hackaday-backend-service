@@ -3,11 +3,9 @@ package com.mchackton.controllers;
 import com.mchackton.configurations.ItemAlertImpl;
 import com.mchackton.services.MailService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.net.http.HttpResponse;
 
 /**
  * Created by sousaJ on 17/08/2020
