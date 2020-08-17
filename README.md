@@ -21,7 +21,7 @@ http://localhost:8025/
 
 Hit the endpoint to send email with last 10 food alerts:
 
-http://localhost:8080/api/sendEmail?email={email of the sender}
+http://localhost:8080/api/sendEmail?email= {email of the sender}
 
 
 ## Stop/Start/Delete mail server
