@@ -20,8 +20,11 @@ Hit the endpoint to send email with last 10 food alerts:
 http://localhost:8080/api/sendEmail?email={email of the sender}
 
 
-## Stpp/Start/Delete mail server
+## Stop/Start/Delete mail server
 
 docker stop mailhog
+
 docker start mailhog
+
 docker rm -fv mailhog
+
