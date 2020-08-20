@@ -1,13 +1,10 @@
 package com.mchackton.configurations;
 
-import com.mchackton.models.ItemAlert;
 import com.mchackton.models.ResponseFoodAlerts;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by sousaJ on 17/08/2020
