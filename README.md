@@ -23,6 +23,10 @@ Hit the endpoint to send email with last 10 food alerts:
 
 http://localhost:8080/api/sendEmail?email= {email of the sender}
 
+## Access Swagger UI:
+
+http://localhost:8080/swagger-ui.html
+
 
 ## Stop/Start/Delete mail server
 

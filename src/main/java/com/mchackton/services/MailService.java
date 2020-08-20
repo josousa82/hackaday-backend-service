@@ -2,7 +2,7 @@ package com.mchackton.services;
 
 import com.github.jknack.handlebars.Handlebars;
 import com.github.jknack.handlebars.Template;
-import com.mchackton.models.ResponseFoodAlerts;
+import com.mchackton.dtos.rest_dtos.FoodAlertsDTO;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ import java.io.IOException;
 @Service
 public class MailService {
 
-    public void triggerEmail(String email, ResponseFoodAlerts foodAlerts) throws IOException {
+    public void triggerEmail(String email, FoodAlertsDTO foodAlerts) throws IOException {
 
         var mailSender = new JavaMailSenderImpl();
         mailSender.setHost("localhost");

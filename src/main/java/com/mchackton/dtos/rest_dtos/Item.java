@@ -1,6 +1,7 @@
 package com.mchackton.dtos.rest_dtos;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
@@ -11,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -28,6 +30,7 @@ import lombok.NoArgsConstructor;
         "type"
 })
 @NoArgsConstructor
+@ToString
 public class Item implements Serializable
 {
 
@@ -42,9 +45,9 @@ public class Item implements Serializable
     @JsonProperty("notation")
     private String notation;
     @JsonProperty("problem")
-    private List<Problem> problem = null;
+    private List<Problem> problem = new ArrayList<>();
     @JsonProperty("productDetails")
-    private List<ProductDetail> productDetails = null;
+    private List<ProductDetail> productDetails = new ArrayList<>();
     @JsonProperty("reportingBusiness")
     private ReportingBusiness reportingBusiness;
     @JsonProperty("shortTitle")
@@ -54,7 +57,7 @@ public class Item implements Serializable
     @JsonProperty("title")
     private String title;
     @JsonProperty("type")
-    private List<String> type = null;
+    private List<String> type = new ArrayList<>();
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
     private final static long serialVersionUID = 5166853120530104650L;

@@ -1,9 +1,12 @@
 package com.mchackton.configurations;
 
-import com.mchackton.models.ResponseFoodAlerts;
+import com.mchackton.dtos.rest_dtos.FoodAlertsDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 
 /**
@@ -21,8 +24,11 @@ public class ItemAlertImpl {
         this.restTemplate = restTemplate;
     }
 
-    public ResponseFoodAlerts getResponse() {
-        ResponseEntity<ResponseFoodAlerts> response = restTemplate.getForEntity(ROOT_API_FOOD, ResponseFoodAlerts.class);
+    public FoodAlertsDTO getResponse() {
+        ResponseEntity<FoodAlertsDTO> response = restTemplate.getForEntity(ROOT_API_FOOD, FoodAlertsDTO.class);
+         Objects.requireNonNull(response.getBody()).getItems().stream()
+         .map(item -> item.toString())
+         .forEach(System.out::println);
         return response.getBody();
     }
 }

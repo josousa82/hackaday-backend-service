@@ -6,6 +6,7 @@ package com.mchackton.dtos.rest_dtos;
  **/
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,11 +31,11 @@ public class Problem implements Serializable
     @JsonProperty("@id")
     private String id;
     @JsonProperty("allergen")
-    private List<Allergen> allergen = null;
+    private List<Allergen> allergen = new ArrayList<>();
     @JsonProperty("riskStatement")
     private String riskStatement;
     @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, Object> additionalProperties = new HashMap<>();
     private final static long serialVersionUID = -7589846767637280360L;
 
     /**
